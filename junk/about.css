@@ -1,0 +1,283 @@
+/*-------Nav bar ----*/
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url();
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    /* font-family: poppins; */
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+    padding-top: 25px;
+}
+
+nav {
+    position: relative;
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    background: #F2B80A;
+    z-index: 1;
+    text-align: right;
+    padding-right: 2%;
+}
+
+.logo {
+    width: 25%;
+    float: left;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 25px;
+    text-align: left;
+    padding: 10px 25px;
+}
+
+.menu-area li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.menu-area a {
+    color: #fff;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    padding: 8px 18px;
+    font-size: 14px;
+    line-height: 30px;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.menu-area a:hover {
+    background: #000;
+    color: #fff;
+}
+
+nav:before {
+    position: absolute;
+    content: '';
+    border-top: 10px solid #fff;
+    border-right: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    top: 100%;
+    left: 0;
+}
+
+nav:after {
+    position: absolute;
+    content: '';
+    border-top: 10px solid #fff;
+    border-left: 10px solid #fff;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    top: 100%;
+    right: 0;
+}
+
+
+/*-------Nav bar ----*/
+
+
+/*------------jumbontron------------*/
+
+#jumbotronm {
+    background-color: coral;
+    background-image: url("https://www.azamara.com/sites/default/files/heros/smal5b-traditional-modern-malaysia-hero-1800x1000.jpg");
+    background-size: cover;
+    opacity: 0.9;
+    font-family: 'Reem Kufi', sans-serif;
+    color: #F3B210;
+    font-weight: 500;
+}
+
+
+/*------------jumbontron------------*/
+
+
+/*------------carousels------------*/
+
+
+/* .carousel {
+    width: 50%;
+    height: 50%;
+    margin: 1px;
+    object-fit: cover;
+}
+
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+    width: 20%;
+    margin: auto;
+    height: 50px;
+    size: 50px;
+} */
+
+
+/*------------carousels------------*/
+
+
+/*------------card of details about me------------*/
+
+.card-img-top {
+    width: 100%;
+    height: 16vw;
+    object-fit: cover;
+    margin: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.card-img {
+    height: 300px;
+    width: 100%;
+}
+
+.class-body {
+    background-color: #F2B80A;
+}
+
+#cardss {
+    margin: 40px 10px;
+    background-color: #F2B80A;
+}
+
+.card {
+    margin: 50px;
+    background-color: #F2B80A;
+}
+
+
+/*-----------card of details about me--------------*/
+
+
+/*-------contact links------*/
+
+.social {
+    position: static;
+    margin: 0px auto;
+    width: 200px;
+    display: block;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    border-radius: 100%;
+}
+
+.social>div {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.social>div:nth-of-type(1) {
+    margin-bottom: -15px;
+}
+
+.social>div:nth-of-type(3) {
+    margin-top: -15px;
+}
+
+.social>div:nth-of-type(3) {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+}
+
+.button::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 96%;
+    height: 96%;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background-color: #ebc766;
+    transition: .2s;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+i {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 10;
+    transition: .2s;
+}
+
+.button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    height: 85%;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%);
+    background-color: #F2B80A;
+    transition: .2s;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+social:hover .button:not(:hover)::before,
+.social:hover .button:not(:hover)::after {
+    transform: translate(-50%, -50%) scale(.85);
+}
+
+.button:hover::after,
+.button:hover::before {
+    transform: translate(-50%, -50%) scale(1.15);
+}
+
+
+/*-------contact links------*/
+
+
+/*-------Footer ----*/
+
+.footer {
+    clear: both;
+    position: relative;
+    z-index: 1;
+    height: 1em;
+    margin-top: 1em;
+    padding: 1%;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*-------Footer ----*/
